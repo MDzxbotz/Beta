@@ -2,9 +2,10 @@ import requests
 
 url = "https://envs.sh"
 
-with open("File.txt", "a+") as file:
+with open("file.txt", "rb") as file:
      file.write("hi hello")
-     response = requests.get(url, files={'file': file})
+     file.seek(0)
+     response = requests.post(url, files={'file': file})
      response.raise_for_status()
      print(dir(response))
      print(response.text)
