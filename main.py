@@ -3,7 +3,7 @@ import requests
 url = "https://envs.sh"
 
 with open("test.txt", "w") as fp:
-     fp.wite("hi hello")
+     fp.write("hi hello")
      
 with open("test.txt", "rb") as file:
      file.seek(1)
