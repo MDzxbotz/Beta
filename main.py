@@ -2,7 +2,7 @@ import requests
 
 url = "https://envs.sh"
 
-with open("file.txt", "rb") as file:
+with open("test.jpg", "rb") as file:
      file.seek(0)
      response = requests.post(url, files={'file': file})
      response.raise_for_status()
