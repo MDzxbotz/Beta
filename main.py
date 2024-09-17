@@ -5,7 +5,7 @@ url = "https://envs.sh"
 with open("test.txt", "w") as fp:
      fp.wite("hi hello")
      
-with open("tert.txt", "rb") as file:
+with open("test.txt", "rb") as file:
      file.seek(1)
      response = requests.post(url, files={'file': file})
      response.raise_for_status()
